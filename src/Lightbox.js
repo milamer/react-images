@@ -250,6 +250,7 @@ class Lightbox extends Component {
 			images,
 			onClickImage,
 			showThumbnails,
+			Component: Comp = 'img'
 		} = this.props;
 
 		const { imageLoaded } = this.state;
@@ -271,7 +272,8 @@ class Lightbox extends Component {
 					https://fb.me/react-unknown-prop is resolved
 					<Swipeable onSwipedLeft={this.gotoNext} onSwipedRight={this.gotoPrev} />
 				*/}
-				<img
+				
+				<Comp
 					className={css(this.classes.image, imageLoaded && this.classes.imageLoaded)}
 					onClick={onClickImage}
 					sizes={sizes}

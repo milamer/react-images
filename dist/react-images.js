@@ -1268,7 +1268,9 @@ var Lightbox = function (_Component) {
 			    currentImage = _props3.currentImage,
 			    images = _props3.images,
 			    onClickImage = _props3.onClickImage,
-			    showThumbnails = _props3.showThumbnails;
+			    showThumbnails = _props3.showThumbnails,
+			    _props3$Component = _props3.Component,
+			    Comp = _props3$Component === undefined ? 'img' : _props3$Component;
 			var imageLoaded = this.state.imageLoaded;
 
 
@@ -1284,7 +1286,7 @@ var Lightbox = function (_Component) {
 			return React__default.createElement(
 				'figure',
 				{ className: aphrodite.css(this.classes.figure) },
-				React__default.createElement('img', {
+				React__default.createElement(Comp, {
 					className: aphrodite.css(this.classes.image, imageLoaded && this.classes.imageLoaded),
 					onClick: onClickImage,
 					sizes: sizes,
